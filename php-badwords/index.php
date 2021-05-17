@@ -20,12 +20,18 @@
  */
 
 
-$text = "Ciao a tutti bellissimi"
-
+$text = "Ciao a tutti bellissimi ";
+$length = strlen($text);
+$bad_word = $_GET['badword'];
+$replaced = str_replace($bad_word,'***', $text)
 
 ?>
 
-<h1><?php echo $text; ?></h1>
+<h1>
+<?php echo $text; ?> (lunghezza testo: <?php echo $length; ?> caratteri)
+</h1>
+
+<h2><?php echo $replaced; ?> </h2>
 
 </body>
 </html>
